@@ -1,29 +1,28 @@
-接听框 · 最终确认版网站更新包
+接听框 · 细亮边确认版网站更新包
 
-这个包用于更新你现有的 transparent-video 网站。源码包留作存档，不需要上传源码包。
+更新现有transparent-video网站请用本包。源码包仅供开发和存档，不要把源码包放进网站仓库。
 
-更新方法（GitHub Desktop）
-1. 下载并解压本网站更新包。
-2. GitHub Desktop 选择 transparent-video 仓库，点击 Repository → Show in Finder。
-3. 建议先把仓库当前内容复制一份留作备份，不要复制或改动隐藏的 .git 文件夹。
-4. 把本包内 index.html、assets、data、images、encoder、precomputed 放进仓库根目录。
-   index.html 选择替换。文件夹请合并并替换同名文件，不要把整个解压文件夹再套一层。
-   旧的 hash 资源留着不影响运行；本包没有引用旧动画 pack。
-5. 回到 GitHub Desktop，Summary 填：更新最终确认版接听框。
-6. 点击 Commit to main，然后 Push origin。
-7. 等待 GitHub Pages 更新，再用原来的网站地址打开；如仍看到旧版，强制刷新。
+GitHub Desktop更新步骤
+1. 解压本网站更新包。
+2. GitHub Desktop选择transparent-video，菜单Repository → Show in Finder打开仓库。
+3. 建议先把当前网站文件备份到仓库以外；不要改动隐藏的.git文件夹。
+4. 将本包内index.html、assets、data、images、encoder、precomputed放入仓库根目录。
+   index.html选择替换；文件夹选择合并并替换同名文件。不要将整个解压文件夹再套一层。
+   仓库已有.nojekyll则保留。若需显示本包内的.nojekyll，可按Command + Shift + .显示隐藏文件。
+   旧hash资源和旧pack留着不影响运行，新入口仅引用本次细亮边数据。
+5. 回到GitHub Desktop，Summary填：更新细亮边确认版。
+6. 点击Commit to main，然后Push origin。
+7. 等待GitHub Pages部署完成，用原网站地址打开。若仍见旧效果，强制刷新或用无痕窗口。
 
-已锁定效果
-- 三个颜色各约 1/3，4 秒顺时针循环，交界更长柔和。
-- 保留彩色色带，只柔化宽白色内投影。
-- 色环在前，粒子在轮廓外、底图上；中央镂空保持真正透明。
-- 底图外围不透明，可替换；客户图片只在浏览器中处理，不上传。
-- 导出 720p / 1080p、9:16、4 秒、60 fps、VP9 + Alpha WebM。
-- 文字及后方视频仍在 WebCut 加，不包含在本工具里。
+本次确认效果
+- 纯白内投影向内透明度渐隐，720p右侧直边最亮部分约3～4像素，不是固定宽度描边。
+- 用户SVG内投影的模糊与偏移共同缩至抗锯齿试样65%，保留原SourceAlpha边缘覆盖与3倍采样结果。
+- 保留原上线页面样式、三色各1/3顺时针循环、交界融合、粒子遮挡、底图与中央透明窗口。
+- 720p / 1080p、9:16、4秒、60fps、VP9 + Alpha透明WebM输出不变。
+- 文字和后方视频仍在WebCut另加。
+- 客户改色与图片仅在当前浏览器处理，不上传，刷新后恢复默认。
 
-使用注意
-建议使用桌面 Chrome / Edge，导出期间保持页面打开。
-首次导出会加载本地编码组件，耗时随设备与网络不同。
-图片和改色不跨设备保存，刷新后恢复默认。
-本次只交付更新包，未替你推送 GitHub，线上站需执行以上步骤才会更新。
-不要把 AE 工程、客户素材、历史样片、测试/备份文件上传进公开仓库。
+交付状态
+已本地构建并打包，未替你推送GitHub。线上更新需要完成以上步骤。
+建议桌面Chrome / Edge使用，生成期间保持页面打开。
+不要把AE工程、客户素材、历史样片、测试和备份文件上传至公开仓库。
