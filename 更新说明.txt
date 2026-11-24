@@ -1,4 +1,4 @@
-接听框 · 细亮边确认版网站更新包
+接听框 · 柔光过渡确认版网站更新包
 
 更新现有transparent-video网站请用本包。源码包仅供开发和存档，不要把源码包放进网站仓库。
 
@@ -9,14 +9,14 @@ GitHub Desktop更新步骤
 4. 将本包内index.html、assets、data、images、encoder、precomputed放入仓库根目录。
    index.html选择替换；文件夹选择合并并替换同名文件。不要将整个解压文件夹再套一层。
    仓库已有.nojekyll则保留。若需显示本包内的.nojekyll，可按Command + Shift + .显示隐藏文件。
-   旧hash资源和旧pack留着不影响运行，新入口仅引用本次细亮边数据。
-5. 回到GitHub Desktop，Summary填：更新细亮边确认版。
+   旧hash资源和旧pack留着不影响运行，新入口仅引用本次柔光过渡数据。
+5. 回到GitHub Desktop，Summary填：更新柔光过渡确认版。
 6. 点击Commit to main，然后Push origin。
 7. 等待GitHub Pages部署完成，用原网站地址打开。若仍见旧效果，强制刷新或用无痕窗口。
 
 本次确认效果
 - 纯白内投影向内透明度渐隐，720p右侧直边最亮部分约3～4像素，不是固定宽度描边。
-- 用户SVG内投影的模糊与偏移共同缩至抗锯齿试样65%，保留原SourceAlpha边缘覆盖与3倍采样结果。
+- 白色高光整体强度为原细亮边版70%；外沿窄亮部保持，向内淡出的柔光范围稍宽，保留原SourceAlpha边缘覆盖与3倍采样结果。
 - 保留原上线页面样式、三色各1/3顺时针循环、交界融合、粒子遮挡、底图与中央透明窗口。
 - 720p / 1080p、9:16、4秒、60fps、VP9 + Alpha透明WebM输出不变。
 - 文字和后方视频仍在WebCut另加。
